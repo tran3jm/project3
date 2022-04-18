@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url("https://use.typekit.net/ccs7mjq.css");
+
+/* 
+ * Styling Elements.
+ */
+
+button {
+    transition: 0.3s;
+}
+
+legend {
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+fieldset {
+    border: 3px rgb(0, 0, 0) solid;
+    width: 30%;
+    margin: 0px;
+    padding: 10px;
+}
+
+.section {
+    border-color: rgb(4, 2, 15);
+    margin: 0 12px 0 12px;
+    background-color: rgb(255, 255, 255);
+  }
+
+.menu-item:hover {
+    text-shadow: rgb(168, 160, 143) 1px 0 10px;
+    background:  rgba(231, 217, 217, 0.548);
+}
+
+/* 
+ * Styling classes
+ */
+
+ .about {
+    display: flex;
+    flex-direction: row;
+    padding: 150px;
+    padding-top: 80px;
+    padding-bottom: 150px;
+ }
+
+.div-section {
+  display: flex;
+  flex-direction: row;
+  padding: 150px;
+  padding-top: 260px;
+  padding-bottom: 150px;
+}
+
+.menu-item {
+    padding: 0px 10px 20px 20px;
+    border: 10px;
+    font-family: droid-serif, serif;
+    transition: 0.3s;
+}
+
+/* ---------Fits image and fieldset on div --------*/
+
+.split-menu {
+    padding: 60px;
+    padding-bottom: 380px;
+    background-color: white;
+}
+
+.split-image {
+    height: 865px;
+    width: 55%;
+    object-fit: cover;
+    margin: 20px 55px 0 ;
+    float: left;            /* Splits image to be on the left */
+    position: relative;
+    padding-bottom: 10%;
+    object-position: 0% 65%;
+
+}
+
+.section-page {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 30px;
+  
+    padding: 40px;
+    padding-top: 60px;
+    border-bottom: 1px solid #000; 
+    line-height: 0.1em;
+  }
+
+  .yelp {
+      padding-top: 20px;
+      background-color: white;
+      text-align: center;
+      padding: auto;
+  }
+
+/* 
+ * Media Queries.
+ */
+
+
+ @media (max-width: 1360px) {
+
+
+    .split-menu {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .split-image {
+        height: 400px;
+        width: 100%;
+        object-position: 0% 77%;
+        height: 625px;
+        margin: 20px 0px 0px 0px ;
+
+    }
+
+    .menu-item {
+        padding-left: 40px;
+        border: 10px;
+        font-size: 25px;
+    }
+
+    .center-fieldset {
+        margin: auto;
+        width: 80%;
+    }
+
+    .yelp {
+        text-align: center;
+    }
+
+    .div-section, 
+    .about {
+        display: flex; /* or inline-flex */
+        flex-direction: column;
+        padding: 100px;
+        padding-top: 140px;
+    }
+
+    .learnmore {
+        display: flex; /* or inline-flex */
+        flex-direction: column;
+        padding: 50px;
+    }
+
+    .chang {
+        margin: auto;
+        scale: 30%;
+        width: 100%;
+        height: 300px;
+        object-position: 0 18%;
+    }
+}

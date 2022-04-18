@@ -1,0 +1,198 @@
+
+
+header {
+    border: none;
+    padding-bottom: 10px;
+    height: 110px;
+}
+
+
+.profile {
+  position: absolute;
+  right: 50px;
+  display: block;
+  padding: 0px 2px 0 0;
+  height: 30px;
+  top: 18px;
+  opacity: .6;
+  transition: 0.5s;
+}
+
+.profile:hover {
+  opacity: 1.0;
+}
+
+.login-sidemenu {
+  border-top: 1px solid #282828;
+}
+
+.nav {
+    border: none;
+    padding-top: 35px;
+  
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+  
+    font-size: 17px;
+    font-weight: 550;
+    font-family: Tahoma, sans-serif;
+  }
+
+/* 
+ * Styling ID's
+ */
+#left {
+    float:left; 
+    background-color: white;
+    border-color: white;
+    padding: 5px;
+  
+  }
+  
+  #right {
+    float:right;
+    background-color: white;
+    left: inherit;
+  }
+
+.sidebar-icon {
+  position: absolute;
+  left: 3%;
+  top: 3%;
+  width: 10%;
+}
+
+.sidenav {
+    margin-left: 0;
+    border: none;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    margin: 6px 12px 6px 12px;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    font-family: Tahoma, sans-serif;
+  }
+
+  .altmenu {
+      display: none;
+  }
+
+  .heading {
+    padding-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 150px;
+  }
+
+  .links {
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgba(207, 207, 207, 0.001);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.11);
+    font-size: 20px;
+
+  }
+
+  .links > a {
+    color: rgb(27, 27, 27);
+    padding: .75em;
+    text-align: center;
+    text-decoration: none;
+    transition: all .2s;
+  }
+
+  .links > a:hover {
+    background: #ffffff06;
+    color: rgb(210, 107, 76);
+  }
+
+  .links > .line {
+    background: rgb(210, 107, 76);
+    height: 3px;
+    pointer-events: none;
+  }
+
+  .links {
+    display: grid;
+    grid-template-columns: repeat(var(--items), 1fr);
+    position: relative;
+  }
+
+  .links > .line {
+    opacity: 0;
+    transition: all .3s;
+    position: absolute;
+    bottom: 0;
+    left: var(--left, calc(100% / var(--items) * (var(--index) - 1)));
+    width: var(--width, calc(100% / var(--items)));
+    --index: 0;
+  }
+  
+  .links > a:hover ~ .line {
+    opacity: 1;
+  }
+  
+  .links > a:nth-of-type(1):hover ~ .line { --index: 1; }
+  .links > a:nth-of-type(2):hover ~ .line { --index: 2; }
+  .links > a:nth-of-type(3):hover ~ .line { --index: 3; }
+  .links > a:nth-of-type(4):hover ~ .line { --index: 4; }
+  .links > a:nth-of-type(5):hover ~ .line { --index: 5; }
+  .links > a:nth-of-type(6):hover ~ .line { --index: 6; }
+  .links > a:nth-of-type(7):hover ~ .line { --index: 7; }
+  .links > a:nth-of-type(8):hover ~ .line { --index: 8; }
+  .links > a:nth-of-type(9):hover ~ .line { --index: 9; }
+  .links > a:nth-of-type(10):hover ~ .line { --index: 10; }
+  .links > a:last-of-type:hover ~ .line { --index: var(--items); }
+
+  
+  @media screen and (max-height: 1360px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+
+  @media (max-width: 1360px) {
+    .altmenu {
+      display: flow-root;
+      position: absolute;
+    }
+    .nav {display: none;}
+    .profile{ display:none; }
+    
+    .heading { 
+      height: 90px;
+    }
+
+
+
+
+
+  }

@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url("https://use.typekit.net/ccs7mjq.css");
+
+body {
+    margin-top: 5%;
+}
+h1 {
+    font-size: 300%;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+}
+
+a {
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    font-size: 80%;
+}
+
+li {
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    font-size: 150%;
+}
+
+header {
+    background-color: rgba(240, 248, 255, 0);
+}
+
+.psection {
+    margin: 0 40px 0 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-left:1em solid transparent;
+    border-right:1em solid transparent;
+    text-overflow: ellipsis;
+    
+}
+
+.username {
+    margin-top: -30px;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.accountinfo {
+    padding-top: 85px;
+}
+
+.profilepage {
+    display:flex;
+    flex-direction: row;
+    padding-top: 45px;
+}
+
+.option {
+    padding: 5px 0 10px 0;
+}
+
+.profile-options {
+    display:flex;
+    flex-direction: column;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 65px;
+    padding-top: 30px;
+}
+
+.welcome {
+    padding:70px;
+    padding-top: 0px;
+    text-align: left;
+}
+
+.coverprofile {
+    background-color: white;
+}
+
+.profileimage {
+    height: 200px;
+    padding-left: 80px;
+}
+
+.profilename {
+    padding-left: 80px;
+}
+
+@media (max-width: 700px) {
+    h1{
+        font-size: 200%;
+    }
+
+}

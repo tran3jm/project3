@@ -1,0 +1,241 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url("https://use.typekit.net/ccs7mjq.css");
+
+body {
+  background-image: url('/project2/images/settingbackground.jpg');
+  background-size: 150%;
+  background-color: rgb(4, 2, 15);
+  min-width: 1000px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* 
+ * Styling Elements.
+ */
+a {
+  font-family: droid-serif, serif;
+}
+
+
+.submit {
+  margin: auto;
+  transition: 0.3s;
+}
+
+p {
+  text-align:inherit;
+  padding: 2%;
+  font-size: 20px;
+  font-family: droid-serif, serif;
+}
+
+h1 {
+  padding-top: 3%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  margin: 0;
+}
+
+header{
+  border: 25px;
+  height: 80px;
+
+  border-left-style: solid;
+  border-right-style: solid;
+
+  border-color: rgb(4, 2, 15);
+  margin: 0px 12px 0 12px;
+  background-color: rgb(255, 255, 255);
+}
+
+span {
+  width:100%;
+  height:1em;
+  display:inline-block;
+}
+
+/* img {
+  width: 200px;
+} */
+
+/* 
+ * Styling classes
+ */
+ 
+/* 
+ * Actions for objects 
+ */
+a:link {
+  color: rgb(4, 2, 15);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(4, 2, 15);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(4, 2, 15);
+  text-decoration: underline;
+}
+
+
+.click-button:hover {
+  opacity: 1.0;
+}
+
+.arrow {
+  display: block;
+  padding-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 5%;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+}
+
+.lily-descrip {
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(4, 2, 15);
+    font-family: droid-serif, serif;
+    padding-top: 50px;
+    padding-bottom: 90px;
+}
+
+/* --------- Styling cover images for all pages ---------*/
+.cover {
+  padding-top: 8%;
+  display: block;
+  text-align: center;
+}
+
+.carousolimage {
+  object-fit: cover;
+  height: 550px; /* height of container */
+  width: 100%;
+}
+
+.coverimage {
+  opacity: 0.6;
+  object-fit: cover;
+  height: 550px;
+  margin-left: 0;
+}
+
+.coverpage {
+  padding: 0;
+  position: relative;
+  text-align: center;
+  background-color: black;
+  margin: 0 12px 0 12px;
+
+}
+
+.cover-text {
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-size: 70px;
+  color: white;
+  text-shadow: rgb(0, 0, 0) 1px 0 10px;
+}
+/* -------------------------------------------------------- */
+
+/* ----- Placing image on left for text to wrap around -----*/
+.chang {
+  height: 730px;
+  width: 300px;
+  object-fit: cover;
+  margin: 35px 50px 0 ;
+  float: left;
+  padding-bottom: 2%;
+
+}
+
+.skinny-image {
+  height: 503px;
+  width: 400px;
+  object-fit: cover;
+  margin: 50px 50px 0 ;
+  float: left;
+  padding-bottom: 2%;
+}
+
+.subtext {
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  font-family: 'Montserrat', sans-serif;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: lighter;
+  color: white;
+
+}
+
+/* ---------------------------------------------------------- */
+
+.click-button {
+  border: 2px solid black;
+  padding: 10px;
+  width: auto;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 550;
+  font-size: 25px;
+
+  opacity: 0.60;
+}
+/* 
+ * Media Queries.
+ */
+@media (max-width: 1360px) {
+  h1 {
+    font-size: 35px;
+  }
+
+  .nav {
+    display:none;
+  }
+
+  .skinny-image {
+    width: 90%; 
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+  .background {
+    object-fit: cover;
+    height: 900px;
+  }
+
+  .click-button{
+    margin-bottom: 10%;
+  }
+
+  .chang {
+    height: 300px;
+    width: 100%;
+    margin:auto;
+  }
+
+}
+

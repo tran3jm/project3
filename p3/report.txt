@@ -1,0 +1,24 @@
+By: Junior Garmendia and Joselyne Tran
+
+Met Expectations: We met most expectations from the project description listed. 
+We used XAMPP to create a local web server. We have multiple external .js files. 
+We have a dynamic greeting and we have buttons and menus that implement fadeToggle 
+and slideToggle respectively. We created a login function and allowed the used to 
+log in and create and account. It is in a database, but the user information is only 
+reflected after the create their account. Once they create, then they can log in and
+see user info. RegEx is also used in the register page. We have javascript files with 
+loops, arrays, variables with local and global scope, objects and conditional statements.
+
+Unmet Expectations:  The Dynamic greeting is a bit shoved in, but it works and we hope to 
+find a better way to integrate it. We were able to figure out the database and how to create new users,
+ have an admin user, and display their information once they logged in. However, we could not figure out 
+ in time how to change the user passwords so we would just delete the user form the data base, as stated 
+ as an option in the specs. This can be fleshed out more, but we did not have enough time to finish.
+Above and Beyond: We believe our aesthetic is very good and clean. We also have a very clean login page 
+and we have an automatic carousel for menu items and a manual carousel to scroll through locations.
+Hour Count: we believe we contributed around 30 hours total to the project.
+Grade Anticipated:  We anticipate a grade around A to B+ range.  
+
+Admin login is:
+Username: Admin
+Password: adminL0gin1290!

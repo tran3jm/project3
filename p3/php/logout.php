@@ -21,13 +21,13 @@ session_destroy();
     <header>
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="index.html">HOME</a>
-            <a href="about.html">OUR STORY</a>
-            <a href="menu.html">MENU</a>
-            <a href="contact.html">CONTACT US</a>
-            <a href="location.html">LOCATION</a>
-            <a href="signin.html" class = "login-sidemenu">LOG IN</a>
-            <a href="signin.html">REGISTER</a>
+            <a href="../index.html">HOME</a>
+            <a href="../about.html">OUR STORY</a>
+            <a href="../menu.html">MENU</a>
+            <a href="../contact.html">CONTACT US</a>
+            <a href="../location.html">LOCATION</a>
+            <a href="../signin.html" class = "login-sidemenu">LOG IN</a>
+            <a href="../signin.html">REGISTER</a>
         </div>
         <span style="font-size:40px;color:white;cursor:pointer" onclick="openNav()" class = "sidebar-icon">&#9776;</span>
     </header>

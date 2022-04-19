@@ -32,6 +32,7 @@ if ($stmt->num_rows > 0) {
 	$stmt->fetch();
 	// Account exists, now we verify the password.
 	// Note: remember to use password_hash in your registration file to store the hashed passwords.
+	// $hash = password_hash($password, PASSWORD_DEFAULT);
 
 	if (password_verify($_POST['password'], $password)) {
 		// Verification success! User has logged-in!
@@ -41,10 +42,10 @@ if ($stmt->num_rows > 0) {
 		$_SESSION['name'] = $_POST['username'];
 		$_SESSION['id'] = $id;
 		if ($_POST['username'] == 'Admin'){
-			header('Location: php/admin.php');
+			header('Location: admin.php');
 		}
 		else {
-			header('Location: php/profile.php');
+			header('Location: profile.php');
 		}
 	} else {
 		// Incorrect password

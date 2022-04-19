@@ -4,7 +4,7 @@ session_start();
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
 $DATABASE_PASS = '';
-$DATABASE_NAME = 'phplogin';
+$DATABASE_NAME = 'modernlilydb';
 
 // Try and connect using the info above.
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
@@ -20,7 +20,7 @@ if ( !isset($_POST['username'], $_POST['password']) ) {
 }
 
 // Prepare our SQL, preparing the SQL statement will prevent SQL injection.
-if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?')) {
+if ($stmt = $con->prepare('SELECT userID, userPassword FROM Users WHERE userUsername = ?')) {
 	// Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
 	$stmt->bind_param('s', $_POST['username']);
 	$stmt->execute();
@@ -32,6 +32,7 @@ if ($stmt->num_rows > 0) {
 	$stmt->fetch();
 	// Account exists, now we verify the password.
 	// Note: remember to use password_hash in your registration file to store the hashed passwords.
+
 	if (password_verify($_POST['password'], $password)) {
 		// Verification success! User has logged-in!
 		// Create sessions, so we know the user is logged in, they basically act like cookies but remember the data on the server.
@@ -40,10 +41,10 @@ if ($stmt->num_rows > 0) {
 		$_SESSION['name'] = $_POST['username'];
 		$_SESSION['id'] = $id;
 		if ($_POST['username'] == 'Admin'){
-			header('Location: admin.php');
+			header('Location: php/admin.php');
 		}
 		else {
-			header('Location: profile.php');
+			header('Location: php/profile.php');
 		}
 	} else {
 		// Incorrect password

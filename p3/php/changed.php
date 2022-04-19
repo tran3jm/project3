@@ -10,13 +10,13 @@ if (!isset($_SESSION['loggedin'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/sectioning.css">
-    <link rel="stylesheet" href="css/logout.css">
-    <link rel="stylesheet" href="css/profile.css">
-    <link rel="modernlily" href="imags/minimal.jpg">
-    <link rel="icon" href="images/minimal.jpg">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/sectioning.css">
+    <link rel="stylesheet" href="../css/logout.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="modernlily" href="../images/minimal.jpg">
+    <link rel="icon" href="../images/minimal.jpg">
     <title> Profile Page </title>
 </head>
 
@@ -25,13 +25,13 @@ if (!isset($_SESSION['loggedin'])) {
     <header>
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="index.html">HOME</a>
-            <a href="about.html">OUR STORY</a>
-            <a href="menu.html">MENU</a>
-            <a href="contact.html">CONTACT US</a>
-            <a href="location.html">LOCATION</a>
-            <a href="signin.html" class = "login-sidemenu">LOG IN</a>
-            <a href="signin.html">REGISTER</a>
+            <a href="../index.html">HOME</a>
+            <a href="../about.html">OUR STORY</a>
+            <a href="../menu.html">MENU</a>
+            <a href="../contact.html">CONTACT US</a>
+            <a href="../location.html">LOCATION</a>
+            <a href="../signin.html" class = "login-sidemenu">LOG IN</a>
+            <a href="../signin.html">REGISTER</a>
         </div>
         <span style="font-size:40px;color:white;cursor:pointer" onclick="openNav()" class = "sidebar-icon">&#9776;</span>
     </header>
@@ -43,6 +43,6 @@ if (!isset($_SESSION['loggedin'])) {
             </div>
         </div>
     </div>
-    <script src = js/header.js> </script>
+    <script src = ../js/header.js> </script>
 </body>
 </html>

@@ -16,26 +16,24 @@ if ( mysqli_connect_errno() ) {
 // initialising variables
 $errors = array();
 
+if ( !isset($_POST['username'], $_POST['password']) ) {
+	// Could not get the data that should have been sent.
+	exit('Please fill both the username and password fields!');
+}
 
-$email = "";
-$username = "";
-$dob = "";
-$firstname = "";
-$lastname = "";
-$password1 = "";
-
-// register users
-$username = mysqli_real_escape_string($con, $_POST['username']);
+$username = $_POST['username'];
+$password1 = $_POST['password'];
 
 if(empty($username)) {array_push($errors, "Username is required");}
 
 // encountered no errors
 if(count($errors) == 0){
 	// since deleteing from the table was a mess due to FK constraints, it was easier to update the entry instead of deleting it.
-	$query = "UPDATE `users` SET userPassword='bears' WHERE userUsername='hassledw'"; // fix the hardcode part.
+	$hash = password_hash($password1, PASSWORD_DEFAULT);
+	$query = "UPDATE `users` SET userPassword='$hash' WHERE userUsername='$username'";
 	mysqli_query($con, $query);
 	header('Location: changed.php');
 } else {
-	echo $dob;
+
 }
 ?>

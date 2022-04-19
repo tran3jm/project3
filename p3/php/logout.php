@@ -6,13 +6,13 @@ session_destroy();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/sectioning.css">
-    <link rel="stylesheet" href="css/logout.css">
-    <link rel="stylesheet" href="css/profile.css">
-    <link rel="modernlily" href="imags/minimal.jpg">
-    <link rel="icon" href="images/minimal.jpg">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/sectioning.css">
+    <link rel="stylesheet" href="../css/logout.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="modernlily" href="../images/minimal.jpg">
+    <link rel="icon" href="../images/minimal.jpg">
     <title> Profile Page </title>
 </head>
 
@@ -40,6 +40,6 @@ session_destroy();
             </div>
         </div>
     </div>
-    <script src = js/header.js> </script>
+    <script src = ../js/header.js> </script>
 </body>
 </html>

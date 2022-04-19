@@ -27,12 +27,12 @@ $stmt->close();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/sectioning.css">
-    <link rel="stylesheet" href="css/profile.css">
-    <link rel="modernlily" href="imags/minimal.jpg">
-    <link rel="icon" href="images/minimal.jpg">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/sectioning.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="modernlily" href="../images/minimal.jpg">
+    <link rel="icon" href="../images/minimal.jpg">
     <title> Profile Page </title>
 </head>
 
@@ -54,7 +54,7 @@ $stmt->close();
     <div class="profilepage section">
         <!-- Cover page with text -->
         <div class = "coverprofile coverpag psectione">
-            <img src="images/sign_in.png" alt="cover about" class = "profileimage">
+            <img src="../images/sign_in.png" alt="cover about" class = "profileimage">
             <h2 class = "profilename">Peacho Tran</h2>
             <p class="username">@username</p>
             <div class = "profile-options">
@@ -76,6 +76,6 @@ $stmt->close();
             </div>
         </div>
     </div>
-    <script src = js/header.js> </script>
+    <script src = ../js/header.js> </script>
 </body>
 </html>

@@ -36,7 +36,9 @@ const container = document.querySelector(".container"),
 
     function verifyPassword() {
         var password = document.getElementById('password').value;
-        var regularExpression = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,30}$/;
+        console.log(password);
+        var regularExpression = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,30}$/;
+        // /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,30}$/;
         if(!regularExpression.test(password)) 
         {
             alert("Invalid password, please try again...")

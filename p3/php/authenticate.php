@@ -31,8 +31,7 @@ if ($stmt->num_rows > 0) {
 	$stmt->bind_result($id, $password);
 	$stmt->fetch();
 	// Account exists, now we verify the password.
-	// Note: remember to use password_hash in your registration file to store the hashed passwords.
-	// $hash = password_hash($password, PASSWORD_DEFAULT);
+	// Note: remember to use password_hash in your registration file to store the hashed passwords. $password should already be hashed.
 
 	if (password_verify($_POST['password'], $password)) {
 		// Verification success! User has logged-in!

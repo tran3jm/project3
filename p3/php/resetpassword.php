@@ -6,12 +6,12 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/signin.css">
-    <link rel="stylesheet" href="css/frgtpassword.css">
-    <link rel="modernlily" href="images/minimal.jpg">
-    <link rel="icon" href="images/minimal.jpg">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/signin.css">
+    <link rel="stylesheet" href="../css/frgtpassword.css">
+    <link rel="modernlily" href="../images/minimal.jpg">
+    <link rel="icon" href="../images/minimal.jpg">
     <title> Forgot Password Form </title>
 
     <!-- ===== Iconscout CSS ==== -->
@@ -24,7 +24,7 @@ session_start();
             <div class="form login">
                 <span class="title">Forgot Password?</span>
 
-                <form action="deleteuser.php" method="post">
+                <form action="changepassword.php" method="post">
                     <div class="input-field">
                         <input type="text" name = "username" placeholder="Enter your Username" 
                         id="username" required>
@@ -51,13 +51,13 @@ session_start();
                 <div class="login-signup"></div>
                 <div>
                 <span class="transition-between">Go back to Login?
-                    <a href="index.html" class="text signup-link">Back</a>
+                    <a href="../index.html" class="text signup-link">Back</a>
                 </span>
                  </div>
             </div>
         
 
         
-<script src="js/signin.js"></script>
+<script src="../js/signin.js"></script>
 </body>
 </html>

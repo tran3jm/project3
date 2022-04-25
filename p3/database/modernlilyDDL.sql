@@ -31,6 +31,7 @@ CREATE TABLE Foods (
     foodID int NOT NULL AUTO_INCREMENT UNIQUE,
     foodName varchar(255), 
     foodCost decimal(6,2),
+    beverage int(1),
     PRIMARY KEY (foodID),
     CONSTRAINT food_cost_constraint CHECK (foodCost > -1)
 );

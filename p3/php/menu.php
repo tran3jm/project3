@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="../css/contact.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/sectioning.css">
+    <link rel="stylesheet" href="../css/addtocart.css">
     <link rel="icon" href="images/minimal.jpg">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -41,6 +42,54 @@
 </head>
 
 <body>
+
+    <!-- Cart Popup -->
+    <div class="w3-modal-content w3-animate-zoom popup">
+        <button id="close">&times;</button>
+        <h1 id="greeting">Cart</h1>
+        <ul class="cartWrap">
+        <li class="items odd">
+            <div class="infoWrap"> 
+                <div class="cartSection">
+                    <img src="../images/drinks/pepsi.jpg" class="itemImg">
+                    <div class = "paymentItem">
+                    <h3 class = "itemTitle">Pepsi</h3>
+                    <div class = "quantity">
+                        <input type="text" class = "qty" id = "amount" placeholder="0"/>
+                        <p class = "price"> x $2.50</p>
+                    </div>
+                </div>
+                    <div class="prodTotal">
+                        <div class="removeWrap">
+                            <a href="#" class="remove">x</a>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </li>
+        <li class="items even">
+            <div class="infoWrap"> 
+                <div class="cartSection">
+                    <img src="../images/foods/banh_mi.jpg" class="itemImg">
+                    <div class = "paymentItem">
+                    <h3 class = "itemTitle">Banh Mi</h3>
+                    <div class = "quantity">
+                        <input type="text" class = "qty" id = "amount" placeholder="0"/>
+                        <p class = "price"> x $9.35</p>
+                    </div>
+                </div>
+                    <div class="prodTotal">
+                        <div class="removeWrap">
+                            <a href="#" class="remove">x</a>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </li>
+        </ul>
+    </div>
+
+    <div id = "menubody">
     <!-- Header with logo and dropdown icon w/ table -->
     <header>
         <div id="mySidenav" class="sidenav">
@@ -54,6 +103,7 @@
             <a href="../signin.html">REGISTER</a>
         </div>
         <span style="font-size:40px;color:black;cursor:pointer" onclick="openNav()" class = "sidebar-icon">&#9776;</span>
+        <img src = "../images/shopping-cart.png" class = "cart" id = "cartIcon" onclick="openNav()">
     </header>
 
     <div class = "coverpage">
@@ -87,7 +137,7 @@
             </a>
          </div>
     </div>
-    <h2 class="cover-text">OUR MENU</h2>
+    <h2 class="menu cover-text">OUR MENU</h2>
 
     <!-- Drink Menu -->
     <div class = "section">
@@ -101,7 +151,9 @@
             <?php
                 foreach ($rows as $row) {
                     if ($row['beverage'] == 1) {
-                        printf("<div class=\"menu-item\">%s <span>%.2f</span> </div>", $row["foodName"], $row["foodCost"]);
+                        printf("<div class=\"menu-item\"><div>%s <span style=\"font-size:large;\">%.2f</span> </div> 
+                        <p class = \"add\" id = %s>Add to order</p></div>", $row["foodName"], 
+                        $row["foodCost"], $row["foodName"]);
                     }
                 }
             ?>
@@ -120,17 +172,20 @@
             <?php
                 foreach ($rows as $row) {
                     if ($row["beverage"] == 0) {
-                        printf("<div class=\"menu-item\">%s <span>%.2f</span> </div>", $row["foodName"], $row["foodCost"]);
+                        printf("<div class=\"menu-item\"><div>%s <span style=\"font-size:large;\">%.2f</span> </div> 
+                        <p class = \"add\" id = %s>Add to order</p></div>", $row["foodName"], 
+                        $row["foodCost"], $row["foodName"]);
                     }
                 }
             ?>
         </fieldset>
         <div class = "yelp section">
-            <a href="https://www.yelp.com/">Don't be shy! Give us a rating ★★★★★</a>
+            <a style="font-size:20px;" href="https://www.yelp.com/">Don't be shy! Give us a rating ★★★★★</a>
         </div>
     </div>
     <script src = "../js/header.js"> </script>
-    <script src = "../js/gallary.js"></script>
+    <script src = "../js/cart.js"></script>
+    </div>
 </body>
 
 </html>

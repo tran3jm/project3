@@ -41,7 +41,7 @@
     <title> Menu Modern Lily </title>
 </head>
 
-<body>
+<body class = "section">
 
     <!-- Cart Popup -->
     <div class="w3-modal-content w3-animate-zoom popup">

@@ -5,6 +5,11 @@
  * Styling Elements.
  */
 
+ html, body {
+    margin: 0;
+    height: 100%;
+}
+
 button {
     transition: 0.3s;
 }
@@ -25,6 +30,7 @@ fieldset {
     border-color: rgb(4, 2, 15);
     margin: 0 12px 0 12px;
     background-color: rgb(255, 255, 255);
+    height: 100%;
   }
 
 

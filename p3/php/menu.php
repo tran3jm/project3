@@ -41,7 +41,7 @@
     <title> Menu Modern Lily </title>
 </head>
 
-<body>
+<body class = "section">
 
     <!-- Cart Popup -->
     <div class="w3-modal-content w3-animate-zoom popup">
@@ -137,7 +137,7 @@
             </a>
          </div>
     </div>
-    <h2 class="cover-text">OUR MENU</h2>
+    <h2 class="menu cover-text">OUR MENU</h2>
 
     <!-- Drink Menu -->
     <div class = "section">
@@ -151,9 +151,9 @@
             <?php
                 foreach ($rows as $row) {
                     if ($row['beverage'] == 1) {
-                        printf("<div class=\"menu-item\">%s <span>%.2f</span> </div>", 
-                        $row["foodName"], 
-                        $row["foodCost"]);
+                        printf("<div class=\"menu-item\"><div>%s <span style=\"font-size:large;\">%.2f</span> </div> 
+                        <p class = \"add\" id = %s>Add to order</p></div>", $row["foodName"], 
+                        $row["foodCost"], $row["foodName"]);
                     }
                 }
             ?>
@@ -172,13 +172,15 @@
             <?php
                 foreach ($rows as $row) {
                     if ($row["beverage"] == 0) {
-                        printf("<div class=\"menu-item\">%s <span>%.2f</span> </div>", $row["foodName"], $row["foodCost"]);
+                        printf("<div class=\"menu-item\"><div>%s <span style=\"font-size:large;\">%.2f</span> </div> 
+                        <p class = \"add\" id = %s>Add to order</p></div>", $row["foodName"], 
+                        $row["foodCost"], $row["foodName"]);
                     }
                 }
             ?>
         </fieldset>
         <div class = "yelp section">
-            <a href="https://www.yelp.com/">Don't be shy! Give us a rating ★★★★★</a>
+            <a style="font-size:20px;" href="https://www.yelp.com/">Don't be shy! Give us a rating ★★★★★</a>
         </div>
     </div>
     <script src = "../js/header.js"> </script>

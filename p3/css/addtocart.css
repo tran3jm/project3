@@ -35,7 +35,11 @@ h1 {
 }
 
 .menu {
+<<<<<<< HEAD
     top: 35%;
+=======
+    top: 37%;
+>>>>>>> 015f9490e18e8833ac6ca6a78d8b3be906e241b8
 }
 
 .itemTitle {

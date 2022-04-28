@@ -88,3 +88,9 @@ span {
     margin-left: 12%;
     width: 90%;
 }
+
+.contact-form {
+    border-color: rgb(4, 2, 15);
+    margin: 0 12px 0 12px;
+    background-color: rgb(255, 255, 255);
+}

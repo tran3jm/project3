@@ -32,8 +32,7 @@ function addToJson(fd, name, price) {
                 <div class = \"paymentItem\"> \
                 <h3 class = \"itemTitle\">"+ name +"</h3> \
                 <div class = \"quantity\"> \
-                    <input type=\"text\" class = \"qty\" id = \"amount\" placeholder=\"1\"/> \
-                    <p class = \"price\"> x $"+ price.toFixed(2) +"</p> \
+                    <p class = \"price\">$"+ price.toFixed(2) +"</p> \
                 </div> \
             </div> \
                 <div class=\"prodTotal\"> \
@@ -51,8 +50,7 @@ function addToJson(fd, name, price) {
                 <div class = \"paymentItem\"> \
                 <h3 class = \"itemTitle\">"+ name +"</h3> \
                 <div class = \"quantity\"> \
-                    <input type=\"text\" class = \"qty\" id = \"amount\" placeholder=\"1\"/> \
-                    <p class = \"price\"> x $"+ price.toFixed(2) +"</p> \
+                    <p class = \"price\">$"+ price.toFixed(2) +"</p> \
                 </div> \
             </div> \
                 <div class=\"prodTotal\"> \

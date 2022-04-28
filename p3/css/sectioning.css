@@ -108,11 +108,6 @@ fieldset {
   }
 
   .add {
-<<<<<<< HEAD
-    font-size: 75%;
-  }
-
-=======
     font-size: 100%;
     transition: .3s;
   }
@@ -123,7 +118,6 @@ fieldset {
     text-decoration:underline;
 }
 
->>>>>>> 015f9490e18e8833ac6ca6a78d8b3be906e241b8
 /* 
  * Media Queries.
  */

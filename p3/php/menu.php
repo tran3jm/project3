@@ -46,10 +46,10 @@
     <!-- Cart Popup -->
     <div class="w3-modal-content w3-animate-zoom popup">
         <button id="close">&times;</button>
+        <div> <button id = "confirmation">CONFIRM ORDER</button> </div>
         <h1 id="greeting">Cart</h1>
-        <ul class="cartWrap">
+        <ul class="cartWrap" id = "cartList">
         </ul>
-        <button>Confirm Order</button>
     </div>
 
     <div id = "menubody">

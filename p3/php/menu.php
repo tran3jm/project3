@@ -41,51 +41,17 @@
     <title> Menu Modern Lily </title>
 </head>
 
+<<<<<<< HEAD
+<body>
+=======
 <body class = "section">
+>>>>>>> 015f9490e18e8833ac6ca6a78d8b3be906e241b8
 
     <!-- Cart Popup -->
     <div class="w3-modal-content w3-animate-zoom popup">
         <button id="close">&times;</button>
         <h1 id="greeting">Cart</h1>
         <ul class="cartWrap">
-        <li class="items odd">
-            <div class="infoWrap"> 
-                <div class="cartSection">
-                    <img src="../images/drinks/pepsi.jpg" class="itemImg">
-                    <div class = "paymentItem">
-                    <h3 class = "itemTitle">Pepsi</h3>
-                    <div class = "quantity">
-                        <input type="text" class = "qty" id = "amount" placeholder="0"/>
-                        <p class = "price"> x $2.50</p>
-                    </div>
-                </div>
-                    <div class="prodTotal">
-                        <div class="removeWrap">
-                            <a href="#" class="remove">x</a>
-                        </div>
-                    </div>
-                </div>  
-            </div>
-        </li>
-        <li class="items even">
-            <div class="infoWrap"> 
-                <div class="cartSection">
-                    <img src="../images/foods/banh_mi.jpg" class="itemImg">
-                    <div class = "paymentItem">
-                    <h3 class = "itemTitle">Banh Mi</h3>
-                    <div class = "quantity">
-                        <input type="text" class = "qty" id = "amount" placeholder="0"/>
-                        <p class = "price"> x $9.35</p>
-                    </div>
-                </div>
-                    <div class="prodTotal">
-                        <div class="removeWrap">
-                            <a href="#" class="remove">x</a>
-                        </div>
-                    </div>
-                </div>  
-            </div>
-        </li>
         </ul>
     </div>
 

@@ -78,16 +78,16 @@
                     <img src="../images/bowl.jpeg" alt="menu cover" class="d-block w-100 carousolimage">
                 </div>
                 <div class="carousel-item">
-                    <img src="../images/foods/dumplings.jpg" alt="Dumplings" class="d-block w-100 carousolimage">
+                    <img src="../images/foods/Dumplings.jpg" alt="Dumplings" class="d-block w-100 carousolimage">
                 </div>
                 <div class="carousel-item">
-                    <img src="../images/foods/pork_bun.jpg" alt="Pork bun" class="d-block w-100 carousolimage">
+                    <img src="../images/foods/Pork Bun.jpg" alt="Pork bun" class="d-block w-100 carousolimage">
                 </div>
                 <div class="carousel-item">
-                    <img src="../images/foods/banh_mi.jpg" alt="Banh Mi" class="d-block w-100 carousolimage"> 
+                    <img src="../images/foods/Banh Mi.jpg" alt="Banh Mi" class="d-block w-100 carousolimage"> 
                 </div>
                 <div class="carousel-item">
-                    <img src="../images/foods/pho.jpg" alt="Pho" class="d-block w-100 carousolimage"> 
+                    <img src="../images/foods/Pho.jpg" alt="Pho" class="d-block w-100 carousolimage"> 
                 </div>
             </div>
             

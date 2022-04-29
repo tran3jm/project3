@@ -1,0 +1,12 @@
+.conformation-section{
+    margin-top: 0px;
+    padding: 20px;
+    background: white;
+}
+
+.check-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}

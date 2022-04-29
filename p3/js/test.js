@@ -4,4 +4,3 @@ let text = '{' +
 
 const jsonobj = JSON.parse(text);
 console.log(jsonobj);
-

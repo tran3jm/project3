@@ -1,6 +1,7 @@
 const cart = [];
 
 document.getElementById("cartIcon").onclick = function() {open()};
+document.getElementById("confirmation").onclick = function() {sendOrder()};
 
 function open(){
     document.querySelector(".popup").style.display = "block";
@@ -21,8 +22,9 @@ document.querySelector("#close").addEventListener("click", function(){
     }); 
 })();
 
+
 function addToJson(fd, name, price) {
-    const temp = [name,price];
+    const temp = {name : name, price : price}
     cart.push(temp);
     var li = document.createElement("li");
     if (cart.length % 2 == 0) {
@@ -65,3 +67,26 @@ function addToJson(fd, name, price) {
     document.getElementById("cartList").appendChild(li);
     
 }
+
+/**
+ * Sends an AJAX request to checkout.php.
+ */
+function sendOrder() {
+    const jsonString = JSON.stringify(cart);
+    console.log(jsonString)
+
+    const xhr = new XMLHttpRequest();
+
+    xhr.open("POST", "http://localhost/project3/p3/php/checkout.php");
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send(jsonString);
+}
+
+// $.ajax({ 
+//     type: "POST", 
+//     url: "http://localhost/project3/p3/php/checkout.php", 
+//     data: { myArray : cart}, 
+//     success: function() { 
+//            alert("Success"); 
+//      } 
+// }); 

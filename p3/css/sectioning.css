@@ -5,6 +5,11 @@
  * Styling Elements.
  */
 
+ html, body {
+    margin: 0;
+    height: 100%;
+}
+
 button {
     transition: 0.3s;
 }
@@ -25,12 +30,9 @@ fieldset {
     border-color: rgb(4, 2, 15);
     margin: 0 12px 0 12px;
     background-color: rgb(255, 255, 255);
+    height: 100%;
   }
 
-.menu-item:hover {
-    text-shadow: rgb(168, 160, 143) 1px 0 10px;
-    background:  rgba(231, 217, 217, 0.548);
-}
 
 /* 
  * Styling classes
@@ -56,7 +58,15 @@ fieldset {
     padding: 0px 10px 20px 20px;
     border: 10px;
     font-family: droid-serif, serif;
+    font-size: large;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
     transition: 0.3s;
+}
+
+.price {
+    font-size: large;
 }
 
 /* ---------Fits image and fieldset on div --------*/
@@ -68,7 +78,7 @@ fieldset {
 }
 
 .split-image {
-    height: 865px;
+    height: 1050px;
     width: 55%;
     object-fit: cover;
     margin: 20px 55px 0 ;
@@ -97,6 +107,17 @@ fieldset {
       padding: auto;
   }
 
+  .add {
+    font-size: 100%;
+    transition: .3s;
+  }
+
+  .add:hover {
+    text-shadow: rgb(168, 160, 143) 1px 0 10px;
+    color: rgb(200, 67, 78);
+    text-decoration:underline;
+}
+
 /* 
  * Media Queries.
  */
@@ -121,6 +142,8 @@ fieldset {
     }
 
     .menu-item {
+        display:flex;
+        flex-direction: row;
         padding-left: 40px;
         border: 10px;
         font-size: 25px;

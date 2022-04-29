@@ -3,6 +3,10 @@
     margin-top: 3%;
 }
 
+.split-menu {
+    height: 110%;
+}
+
 
 .locationimage {
     height: 650px;
@@ -43,7 +47,7 @@
 .location-container .right-button{
     position: absolute;
     top: 0%;
-    right: 40%;
+    right: 41.5%;
     transform: translate(-35%, 750%);
     /* -ms-transform: translate(-50%, -50%); */
     background-color: black;
@@ -68,8 +72,15 @@
  
   }
 
+.location-section {
+    padding-bottom: 0;
+}
+
 @media (max-width: 1360px) {
     
+    .location-section {
+        height: auto;
+    }
     .locationimage {
         float: none; 
         width: 65%;

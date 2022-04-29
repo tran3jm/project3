@@ -10,14 +10,14 @@
     
     <title> Modern Lily Locations </title>
 </head>
-<body>
+<body class = "section">
     <!-- Header with logo and dropdown icon w/ table -->
     <header>
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="index.html">HOME</a>
             <a href="about.html">OUR STORY</a>
-            <a href="menu.html">MENU</a>
+            <a href="php/menu.php">MENU</a>
             <a href="contact.html">CONTACT US</a>
             <a href="location.html">LOCATION</a>
             <a href="signin.html" class = "login-sidemenu">LOG IN</a>
@@ -36,7 +36,7 @@
     <div>
         <h1 class = "section-page section"> Store locations</h1>
     </div>
-    <div class = "split-menu section">
+    <div class = "location-section split-menu section">
         <div class="location-container">
             <div class="location-gallery">
                 <img src ="images/locations/richmond.jpg" alt = "Richmond Location" class = "split-image"> 
@@ -70,6 +70,7 @@
             <button class="left-button" onclick="plusDivs(-1)">&#10094;</button>
             <button class="right-button" onclick="plusDivs(+1)">&#10095;</button>
         </div>
+        <div>
          <!-- Richmond -->
         <fieldset class = "center-fieldset address">
             <legend>Richmond, Virginia</legend>
@@ -101,6 +102,7 @@
                 <span>292 Centille Run Harrisonburg, Virginia, 23930</span>
             </div>
         </fieldset>
+    </div>
     </div>
     <script src = "js/header.js"> </script>
     <script src = "js/gallary.js"></script>

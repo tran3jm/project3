@@ -43,7 +43,7 @@ $stmt->close();
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="../index.html">HOME</a>
             <a href="../about.html">OUR STORY</a>
-            <a href="../menu.html">MENU</a>
+            <a href="menu.php">MENU</a>
             <a href="../contact.html">CONTACT US</a>
             <a href="../location.html">LOCATION</a>
             <a href="../signin.html" class = "login-sidemenu">LOG IN</a>

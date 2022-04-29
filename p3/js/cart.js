@@ -68,11 +68,13 @@ function addToJson(fd, name, price) {
     
 }
 
+// let jsonString;
+
 /**
  * Sends an AJAX request to checkout.php.
  */
 function sendOrder() {
-    const jsonString = JSON.stringify(cart);
+    jsonString = JSON.stringify(cart);
     console.log(jsonString)
 
     const xhr = new XMLHttpRequest();
@@ -82,10 +84,30 @@ function sendOrder() {
     xhr.send(jsonString);
 }
 
+    // let data = new FormData();
+    // data.append('game', 'awakening');
+    // data.append('characters', JSON.stringify(characters));
+// let xmlhttp = new XMLHttpRequest();
+//     xmlhttp.onload = () => {
+//         let response = xmlhttp.responseText;
+//         if (response) {
+//             console.log("Success");
+//             //window.location.reload();
+//             removeAllCharacters();
+//             queryCharacters();
+//             window.AOS.refresh();
+//             bootstrap.Modal.getOrCreateInstance(document.getElementById('statusModal')).hide();
+//         } else {
+//             console.log("Failure");
+//         }
+//     }
+//     xmlhttp.open("POST", `https://159.223.157.198/php/putCharacters.php`, true);
+//     xmlhttp.send(data);
+
 // $.ajax({ 
 //     type: "POST", 
 //     url: "http://localhost/project3/p3/php/checkout.php", 
-//     data: { myArray : cart}, 
+//     data: { myArray : jsonString}, 
 //     success: function() { 
 //            alert("Success"); 
 //      } 

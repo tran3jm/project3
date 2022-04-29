@@ -4,6 +4,9 @@ $requestPayload = file_get_contents("php://input");
 
 $requestPayload = preg_replace('/[[:^print:]]/', '', $requestPayload);
 
+// $obj = json_decode($_POST["myArray"]);
+// echo $obj->var;
+
 if ($requestPayload == NULL) {
      exit("There's something wrong with the payload.");
 }

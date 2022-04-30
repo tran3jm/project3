@@ -35,7 +35,7 @@
     <link rel="icon" href="images/minimal.jpg">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <title> Menu Modern Lily </title>
@@ -47,6 +47,29 @@
     <div class="w3-modal-content w3-animate-zoom popup">
         <button id="close">&times;</button>
         <div> <button id = "confirmation">CONFIRM ORDER</button> </div>
+        <script>
+            $(document).ready(function() {
+                $('#confirmation').click(function(){
+                    let fd = new FormData();
+                    let itemsInCart = document.getElementsByClassName("cartSection");
+                    console.log(itemsInCart.length);
+                    console.log(itemsInCart[0]);
+                    $.ajax({
+                        type: "POST",
+                        url: 'http://localhost/project3/p3/php/checkout.php',
+                        data: {
+                            myName : "Daniel Hassler"
+                        },
+                        method: "POST",
+                        
+                        success: function(output){
+                            alert(output);
+                        }
+                    });
+
+                });
+            });
+        </script>
         <h1 id="greeting">Cart</h1>
         <ul class="cartWrap" id = "cartList">
         </ul>

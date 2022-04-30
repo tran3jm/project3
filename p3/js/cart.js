@@ -1,7 +1,8 @@
+
 const cart = [];
 
 document.getElementById("cartIcon").onclick = function() {open()};
-document.getElementById("confirmation").onclick = function() {sendOrder()};
+//document.getElementById("confirmation").onclick = function() {sendOrder()};
 
 function open(){
     document.querySelector(".popup").style.display = "block";
@@ -73,42 +74,14 @@ function addToJson(fd, name, price) {
 /**
  * Sends an AJAX request to checkout.php.
  */
-function sendOrder() {
-    jsonString = JSON.stringify(cart);
-    console.log(jsonString)
+// function sendOrder() {
+//     let fd = new FormData()
+//     fd.append("cart", JSON.stringify(cart));
+//     console.log(fd)
 
-    const xhr = new XMLHttpRequest();
-
-    xhr.open("POST", "http://localhost/project3/p3/php/checkout.php");
-    xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.send(jsonString);
-}
-
-    // let data = new FormData();
-    // data.append('game', 'awakening');
-    // data.append('characters', JSON.stringify(characters));
-// let xmlhttp = new XMLHttpRequest();
-//     xmlhttp.onload = () => {
-//         let response = xmlhttp.responseText;
-//         if (response) {
-//             console.log("Success");
-//             //window.location.reload();
-//             removeAllCharacters();
-//             queryCharacters();
-//             window.AOS.refresh();
-//             bootstrap.Modal.getOrCreateInstance(document.getElementById('statusModal')).hide();
-//         } else {
-//             console.log("Failure");
-//         }
-//     }
-//     xmlhttp.open("POST", `https://159.223.157.198/php/putCharacters.php`, true);
-//     xmlhttp.send(data);
-
-// $.ajax({ 
-//     type: "POST", 
-//     url: "http://localhost/project3/p3/php/checkout.php", 
-//     data: { myArray : jsonString}, 
-//     success: function() { 
-//            alert("Success"); 
-//      } 
-// }); 
+//     const xhr = new XMLHttpRequest();
+//     xhr.open("POST", "http://localhost/project3/p3/php/checkout.php");
+//     xhr.setRequestHeader("Accept", "application/json");
+//     xhr.setRequestHeader("Content-Type", "application/json");
+//     xhr.send(fd);
+// }

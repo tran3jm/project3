@@ -50,9 +50,7 @@
         <script>
             $(document).ready(function() {
                 $('#confirmation').click(function(){
-                    let fd = new FormData();
                     let itemsInCart = getCart();
-
                     $.ajax({
                         type: "POST",
                         url: 'http://localhost/project3/p3/php/checkout.php',
@@ -60,7 +58,6 @@
                             cart : JSON.stringify(itemsInCart)
                         },
                         method: "POST",
-                        
                         success: function(output){
                             alert(output);
                         }

@@ -46,7 +46,7 @@
     <!-- Cart Popup -->
     <div class="w3-modal-content w3-animate-zoom popup">
         <button id="close">&times;</button>
-        <div> <button id = "confirmation">CONFIRM ORDER</button> </div>
+        <div> <button id = "confirmation" onclick="window.location.href = '../orderConfor.html'">CONFIRM ORDER</button> </div>
         <script>
             $(document).ready(function() {
                 $('#confirmation').click(function(){

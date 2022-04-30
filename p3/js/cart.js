@@ -69,6 +69,10 @@ function addToJson(fd, name, price) {
     
 }
 
+function getCart() {
+    return cart;
+}
+
 // let jsonString;
 
 /**

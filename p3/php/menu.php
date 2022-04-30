@@ -51,14 +51,13 @@
             $(document).ready(function() {
                 $('#confirmation').click(function(){
                     let fd = new FormData();
-                    let itemsInCart = document.getElementsByClassName("cartSection");
-                    console.log(itemsInCart.length);
-                    console.log(itemsInCart[0]);
+                    let itemsInCart = getCart();
+
                     $.ajax({
                         type: "POST",
                         url: 'http://localhost/project3/p3/php/checkout.php',
                         data: {
-                            myName : "Daniel Hassler"
+                            cart : JSON.stringify(itemsInCart)
                         },
                         method: "POST",
                         

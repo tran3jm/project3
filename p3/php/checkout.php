@@ -1,6 +1,6 @@
 <?php
 
-echo $_POST["myName"];
+echo $_POST["cart"];
 // echo $obj->var;
 
 

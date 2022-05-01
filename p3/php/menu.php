@@ -46,7 +46,7 @@
     <!-- Cart Popup -->
     <div class="w3-modal-content w3-animate-zoom popup">
         <button id="close">&times;</button>
-        <div> <button id = "confirmation" onclick="window.location.href = '../orderConfor.html'">CONFIRM ORDER</button> </div>
+        <div> <button id = "confirmation">CONFIRM ORDER</button> </div>
         <script>
             $(document).ready(function() {
                 $('#confirmation').click(function(){
@@ -55,11 +55,16 @@
                         type: "POST",
                         url: 'http://localhost/project3/p3/php/checkout.php',
                         data: {
-                            cart : JSON.stringify(itemsInCart)
+                            cart : itemsInCart
                         },
                         method: "POST",
                         success: function(output){
+                            // onclick="window.location.href = '../orderConfor.html'"
+                            $(window).load("../orderConfor.html");
                             alert(output);
+                        },
+                        error: function(error) {
+                            console.log(error);
                         }
                     });
                     sessionStorage.removeItem("cart");

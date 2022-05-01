@@ -62,7 +62,7 @@
                             alert(output);
                         }
                     });
-
+                    sessionStorage.removeItem("cart");
                 });
             });
         </script>

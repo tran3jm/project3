@@ -6,37 +6,34 @@
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/contact.css">
     <link rel="stylesheet" href="../css/greeting.css">
-    <link rel="modernlily" href="images/minimal.jpg">
-    <link rel="icon" href="images/minimal.jpg">
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="modernlily" href="../images/minimal.jpg">
+    <link rel="icon" href="../images/minimal.jpg">
     <title> Credit Info </title>
 </head>
-<body>
+<body class = "section">
     <!-- Header with logo and dropdown icon w/ table -->
     <header>
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="../index.html">HOME</a>
-            <a href="../about.html">OUR STORY</a>
-            <a href="menu.php">MENU</a>
-            <a href="../contact.html">CONTACT US</a>
-            <a href="../location.html">LOCATION</a>
-            <a href="../signin.html" class = "login-sidemenu">LOG IN</a>
-            <a href="../signin.html">REGISTER</a>
+            <a href="index.html">HOME</a>
+            <a href="about.html">OUR STORY</a>
+            <a href="menu.html">MENU</a>
+            <a href="contact.html">CONTACT US</a>
+            <a href="location.html">LOCATION</a>
+            <a href="signin.html" class = "login-sidemenu">LOG IN</a>
+            <a href="signin.html">REGISTER</a>
         </div>
         <span style="font-size:40px;color:black;cursor:pointer" onclick="openNav()" class = "sidebar-icon">&#9776;</span>
     </header>
 
     <!-- Cover page with text -->
     <div class = "coverpage">
-        <img src="../images/setting.jpeg" alt="cover contact" style="width:100%;" class = "coverimage">
+        <img src="images/setting.jpeg" alt="cover contact" style="width:100%;" class = "coverimage">
         <h2 class="cover-text">Order Conformation</h2>
     </div>
 
-    <div class = "contact-form">
-        <h1 class = "cover" style="text-align: left;">Order Conformation</h1>
+    <div>
+        <h1 class = "contact-form" style="text-align: left;">Order Conformation</h1>
     </div>
 
     <div class = "contact-form">
@@ -75,34 +72,9 @@
                 <legend>Message: *</legend>
                 <input type="email" id="message" name="message" class = "message"><br><br>
             </fieldset>
+            <input type="submit" value="Submit" class = "submit">
         </form>
-
-        <button id="submitcheckout"  class = "submit">SUBMIT ORDER</button>
-        <script>
-        $(document).ready(function() {
-            $('#submitcheckout').click(function(){
-                let itemsInCart = getCart();
-                $.ajax({
-                    type: "POST",
-                    url: 'http://localhost/project3/p3/php/checkout.php',
-                    data: {
-                        cart : itemsInCart
-                    },
-                    method: "POST",
-                    success: function(output){
-                        alert(output);
-                    },
-                    error: function(error) {
-                        console.log(error);
-                    }
-                });
-                sessionStorage.removeItem("cart");
-            });
-        });
-        </script>
-
     </div>
-    <script src = "../js/header.js"> </script>
-    <script src = "../js/cart.js"> </script>
+    <script src = "js/header.js"> </script>
 </body>
 </html>

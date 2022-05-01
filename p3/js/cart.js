@@ -1,5 +1,12 @@
+var cart = [];
 
-const cart = [];
+if (sessionStorage.getItem("cart") != null) {
+  cart = JSON.parse(sessionStorage.getItem("cart"));
+  var i = 0;
+  for (i = 0; i < cart.length; i++) {
+      populateCartHTML(cart[i]["fd"], cart[i]["name"], cart[i]["price"]);
+  }
+}
 
 document.getElementById("cartIcon").onclick = function() {open()};
 //document.getElementById("confirmation").onclick = function() {sendOrder()};
@@ -25,8 +32,13 @@ document.querySelector("#close").addEventListener("click", function(){
 
 
 function addToJson(fd, name, price) {
-    const temp = {name : name, price : price}
+    const temp = {name : name, price : price, fd : fd}
     cart.push(temp);
+    populateCartHTML(fd, name, price);
+    sessionStorage.setItem("cart", JSON.stringify(cart));
+}
+
+function populateCartHTML(fd, name, price) {
     var li = document.createElement("li");
     if (cart.length % 2 == 0) {
         li.innerHTML = "<li class = \"items even\"><div class=\"infoWrap\"> \
@@ -66,26 +78,8 @@ function addToJson(fd, name, price) {
         </li>";
     }
     document.getElementById("cartList").appendChild(li);
-    
 }
 
 function getCart() {
-    return cart;
+    return sessionStorage.getItem("cart");
 }
-
-// let jsonString;
-
-/**
- * Sends an AJAX request to checkout.php.
- */
-// function sendOrder() {
-//     let fd = new FormData()
-//     fd.append("cart", JSON.stringify(cart));
-//     console.log(fd)
-
-//     const xhr = new XMLHttpRequest();
-//     xhr.open("POST", "http://localhost/project3/p3/php/checkout.php");
-//     xhr.setRequestHeader("Accept", "application/json");
-//     xhr.setRequestHeader("Content-Type", "application/json");
-//     xhr.send(fd);
-// }

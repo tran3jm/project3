@@ -46,8 +46,8 @@
     <!-- Cart Popup -->
     <div class="w3-modal-content w3-animate-zoom popup">
         <button id="close">&times;</button>
-        <div> <button id = "confirmation">CONFIRM ORDER</button> </div>
-        <script>
+        <div> <button id = "confirmation" onclick="window.location.href = 'orderconfirmation.php'">CONFIRM ORDER</button> </div>
+        <!-- <script>
             $(document).ready(function() {
                 $('#confirmation').click(function(){
                     let itemsInCart = getCart();
@@ -55,17 +55,22 @@
                         type: "POST",
                         url: 'http://localhost/project3/p3/php/checkout.php',
                         data: {
-                            cart : JSON.stringify(itemsInCart)
+                            cart : itemsInCart
                         },
                         method: "POST",
                         success: function(output){
+                            // onclick="window.location.href = '../orderConfor.html'"
+                            $(window).load("../orderConfor.html");
                             alert(output);
+                        },
+                        error: function(error) {
+                            console.log(error);
                         }
                     });
-
+                    sessionStorage.removeItem("cart");
                 });
             });
-        </script>
+        </script> -->
         <h1 id="greeting">Cart</h1>
         <ul class="cartWrap" id = "cartList">
         </ul>
@@ -78,7 +83,7 @@
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="../index.html">HOME</a>
             <a href="../about.html">OUR STORY</a>
-            <a href="../menu.html">MENU</a>
+            <a href="menu.php">MENU</a>
             <a href="../contact.html">CONTACT US</a>
             <a href="../location.html">LOCATION</a>
             <a href="../signin.html" class = "login-sidemenu">LOG IN</a>

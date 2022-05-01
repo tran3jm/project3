@@ -37,7 +37,7 @@ $stmt->close();
     <title> Profile Page </title>
 </head>
 
-<body>
+<body class = "section">
     <!-- Header with logo and dropdown icon w/ table -->
     <header>
         <div id="mySidenav" class="sidenav">
@@ -50,14 +50,14 @@ $stmt->close();
             <a href="../signin.html" class = "login-sidemenu">LOG IN</a>
             <a href="../signin.html">REGISTER</a>
         </div>
-        <span style="font-size:40px;color:white;cursor:pointer" onclick="openNav()" class = "sidebar-icon">&#9776;</span>
+        <span style="font-size:40px;color:black;cursor:pointer" onclick="openNav()" class = "sidebar-icon">&#9776;</span>
     </header>
     <div class="profilepage section">
         <!-- Cover page with text -->
         <div class = "coverprofile coverpag psectione">
             <img src="../images/sign_in.png" alt="cover about" class = "profileimage">
-            <h2 class = "profilename">Peacho Tran</h2>
-            <p class="username">@username</p>
+            <h2 class = "profilename"><?=$firstname?> <?=$lastname?></h2>
+            <p class="username">@<?=$username?></p>
             <div class = "profile-options">
                 <a href="resetpassword.php" class="option">RESET PASSWORD</a>
                 <a href="logout.php"  class="option">LOGOUT</a>

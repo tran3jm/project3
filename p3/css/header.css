@@ -2,14 +2,20 @@
 
 header {
     border: none;
+    border-bottom: solid;
+    border-color: slategrey;
     padding-bottom: 10px;
     height: 110px;
+}
+
+.borderlessHeader {
+      border: none;
 }
 
 
 .profile {
   position: absolute;
-  right: 50px;
+  right: 4%;
   display: block;
   padding: 0px 2px 0 0;
   height: 40px;
@@ -58,7 +64,7 @@ header {
 
 .sidebar-icon {
   position: absolute;
-  left: 3%;
+  left: 5%;
   top: 3%;
   width: 10%;
 }

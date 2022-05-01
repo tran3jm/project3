@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 @import url("https://use.typekit.net/ccs7mjq.css");
 
-body {
-    margin-top: 5%;
-}
+
 h1 {
     font-size: 300%;
     font-family: 'Montserrat', sans-serif;
@@ -29,10 +27,6 @@ li {
     font-size: 150%;
 }
 
-header {
-    background-color: rgba(240, 248, 255, 0);
-}
-
 .psection {
     margin: 0 40px 0 40px;
     white-space: nowrap;
@@ -56,7 +50,7 @@ header {
 .profilepage {
     display:flex;
     flex-direction: row;
-    padding-top: 45px;
+    padding: 10%;
 }
 
 .option {
@@ -73,7 +67,7 @@ header {
 }
 
 .welcome {
-    padding:70px;
+    padding:6%;
     padding-top: 0px;
     text-align: left;
 }

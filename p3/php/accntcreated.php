@@ -16,7 +16,7 @@ session_destroy();
     <title> Profile Page </title>
 </head>
 
-<body>
+<body section = "class">
     <!-- Header with logo and dropdown icon w/ table -->
     <header>
         <div id="mySidenav" class="sidenav">
@@ -29,15 +29,14 @@ session_destroy();
             <a href="../signin.html" class = "login-sidemenu">LOG IN</a>
             <a href="../signin.html">REGISTER</a>
         </div>
-        <span style="font-size:40px;color:white;cursor:pointer" onclick="openNav()" class = "sidebar-icon">&#9776;</span>
+        <span style="font-size:40px;color:black;cursor:pointer" onclick="openNav()" class = "sidebar-icon">&#9776;</span>
     </header>
+
         <!-- Description -->
-        <div class = "welcome section">
-            <!-- <h1>Welcome back, <?=$_SESSION['name']?></h1> -->
-            <h1>Your account has been created!</h1>
-            <h2>Please log in with your new account information.</h2>
-            <div class = "logout psection">
-            </div>
+    <div class = "welcome section">
+        <h1>Your account has been created!</h1>
+        <h2>Please log in with your new account information.</h2>
+        <div class = "logout psection">
         </div>
     </div>
     <script src = ../js/header.js> </script>

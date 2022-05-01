@@ -226,6 +226,10 @@ input.qty {
     
 }
 
+.removeItem {
+    display:none;
+}
+
 a.remove {
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
@@ -237,4 +241,9 @@ a.remove {
     display: inline-block;
     border-radius: 100%;
     line-height: .85;
+    transition: transition(all, .25s, linear);
+  }
+
+  a.remove:hover {
+    background: #f30;
   }

@@ -3,9 +3,7 @@ var cart = [];
 if (sessionStorage.getItem("cart") != null) {
   cart = JSON.parse(sessionStorage.getItem("cart"));
   var i = 0;
-  for (i = 0; i < cart.length; i++) {
-      populateCartHTML(cart[i]["fd"], cart[i]["name"], cart[i]["price"]);
-  }
+  fullyPopulateCart()
 }
 
 document.getElementById("cartIcon").onclick = function() {open()};
@@ -16,6 +14,8 @@ function open(){
     document.body.classList.add('stop-scrolling');
     document.getElementById("menubody").classList.add('menubodyPaused');
 }
+
+
 
 document.querySelector("#close").addEventListener("click", function(){
     document.querySelector(".popup").style.display = "none";
@@ -30,17 +30,24 @@ document.querySelector("#close").addEventListener("click", function(){
     }); 
 })();
 
+(function() {
+    const inventory = document.getElementsByClassName("remove");
+    inventory.array.forEach(element => {
+        element.onclick("click", removeItem, false);
+    }); 
+})();
+
 
 function addToJson(fd, name, price) {
     const temp = {name : name, price : price, fd : fd}
     cart.push(temp);
-    populateCartHTML(fd, name, price);
+    populateCartHTML(fd, name, price, cart.length);
     sessionStorage.setItem("cart", JSON.stringify(cart));
 }
 
-function populateCartHTML(fd, name, price) {
+function populateCartHTML(fd, name, price, i) {
     var li = document.createElement("li");
-    if (cart.length % 2 == 0) {
+    if (i % 2 == 0) {
         li.innerHTML = "<li class = \"items even\"><div class=\"infoWrap\"> \
             <div class=\"cartSection\"> \
                 <img src=\"../images/"+ fd +"/"+ name +".jpg\" class=\"itemImg\"></img> \
@@ -52,7 +59,7 @@ function populateCartHTML(fd, name, price) {
             </div> \
                 <div class=\"prodTotal\"> \
                     <div class=\"removeWrap\"> \
-                        <a href=\"#\" class=\"remove\">x</a> \
+                    <a href=\"#\" class=\"remove\" onclick=\"removeItem('"+ name + "'," + price + ",'" + fd + "')\">x</a> \
                     </div> \
                 </div> \
             </div> \
@@ -70,7 +77,7 @@ function populateCartHTML(fd, name, price) {
             </div> \
                 <div class=\"prodTotal\"> \
                     <div class=\"removeWrap\"> \
-                        <a href=\"#\" class=\"remove\">x</a> \
+                    <a href=\"#\" class=\"remove\" onclick=\"removeItem('"+ name + "'," + price + ",'" + fd + "')\">x</a> \
                     </div> \
                 </div> \
             </div> \
@@ -78,6 +85,33 @@ function populateCartHTML(fd, name, price) {
         </li>";
     }
     document.getElementById("cartList").appendChild(li);
+}
+
+function fullyPopulateCart() {
+    for (i = 0; i < cart.length; i++) {
+        populateCartHTML(cart[i]["fd"], cart[i]["name"], cart[i]["price"], i);
+    }
+}
+
+function removeItem(name, price, fd) {
+    const temp = {name : name, price : price, fd : fd};
+    cart = arrayRemove(cart, temp);
+    var myList = document.getElementById('cartList');
+    myList.innerHTML = '';
+    fullyPopulateCart();
+  }
+
+function arrayRemove(arr, value) { 
+    let temp = [];
+    var count = 0;
+    for (const e of arr) {
+         if (count == 0 && e.name == value.name) {
+            count++;
+        } else {
+            temp.push(e);
+        }
+    }
+    return temp;
 }
 
 function getCart() {

@@ -18,6 +18,7 @@ if (mysqli_connect_errno()) {
 $stmt = $con->prepare('SELECT userUsername, userPassword, userEmail, userFName, userLName FROM users WHERE userID = ?');
 // In this case we can use the account ID to get the account info.
 $stmt->bind_param('i', $_SESSION['id']);
+#$_SESSION['username'] = $username;
 $stmt->bind_result($username, $password, $email, $firstname, $lastname);
 $stmt->execute();
 $stmt->fetch();

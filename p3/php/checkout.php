@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
 $DATABASE_PASS = '';
@@ -13,7 +15,8 @@ if ( mysqli_connect_errno() ) {
 
 $array = json_decode($_POST["cart"], true);
 print_r($array);
-$userid = 1; // seth question :,)
+$userid = $_SESSION['id']; // seth question :,)
+echo $_SESSION['id'];
 $insertOrderQuery = "INSERT INTO `Orders` (`userID`) VALUES ('$userid')";
 
 mysqli_query($con, $insertOrderQuery);

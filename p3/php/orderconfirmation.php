@@ -18,13 +18,13 @@
     <header>
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="index.html">HOME</a>
-            <a href="about.html">OUR STORY</a>
-            <a href="php/menu.php">MENU</a>
-            <a href="contact.html">CONTACT US</a>
-            <a href="location.html">LOCATION</a>
-            <a href="signin.html" class = "login-sidemenu">LOG IN</a>
-            <a href="signin.html">REGISTER</a>
+            <a href="../index.html">HOME</a>
+            <a href="../about.html">OUR STORY</a>
+            <a href="menu.php">MENU</a>
+            <a href="../contact.html">CONTACT US</a>
+            <a href="../location.html">LOCATION</a>
+            <a href="../signin.html" class = "login-sidemenu">LOG IN</a>
+            <a href="../signin.html">REGISTER</a>
         </div>
         <span style="font-size:40px;color:black;cursor:pointer" onclick="openNav()" class = "sidebar-icon">&#9776;</span>
     </header>
@@ -75,8 +75,32 @@
                 <legend>Message: *</legend>
                 <input type="email" id="message" name="message" class = "message"><br><br>
             </fieldset>
-            <input id="submitcheckout" type="submit" value="Submit" class = "submit">
         </form>
+
+        <button id="submitcheckout">SUBMIT ORDER</button>
+        <script>
+        $(document).ready(function() {
+            $('#submitcheckout').click(function(){
+                let itemsInCart = getCart();
+                $.ajax({
+                    type: "POST",
+                    url: 'http://localhost/project3/p3/php/checkout.php',
+                    data: {
+                        cart : itemsInCart
+                    },
+                    method: "POST",
+                    success: function(output){
+                        alert(output);
+                    },
+                    error: function(error) {
+                        console.log(error);
+                    }
+                });
+                sessionStorage.removeItem("cart");
+            });
+        });
+        </script>
+
     </div>
     <script src = "../js/header.js"> </script>
     <script src = "../js/cart.js"> </script>

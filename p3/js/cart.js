@@ -83,20 +83,3 @@ function populateCartHTML(fd, name, price) {
 function getCart() {
     return sessionStorage.getItem("cart");
 }
-
-// let jsonString;
-
-/**
- * Sends an AJAX request to checkout.php.
- */
-// function sendOrder() {
-//     let fd = new FormData()
-//     fd.append("cart", JSON.stringify(cart));
-//     console.log(fd)
-
-//     const xhr = new XMLHttpRequest();
-//     xhr.open("POST", "http://localhost/project3/p3/php/checkout.php");
-//     xhr.setRequestHeader("Accept", "application/json");
-//     xhr.setRequestHeader("Content-Type", "application/json");
-//     xhr.send(fd);
-// }

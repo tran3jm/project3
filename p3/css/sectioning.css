@@ -14,6 +14,14 @@ button {
     transition: 0.3s;
 }
 
+#submitcheckout {
+    width: 50%;
+    height: 10%;
+    padding: 20px;
+    height: 20%;
+    background-color: lightblue;
+}
+
 legend {
     font-size: 30px;
     font-family: 'Montserrat', sans-serif;
@@ -108,11 +116,13 @@ fieldset {
   }
 
   .add {
+    z-index: 2;
     font-size: 100%;
     transition: .3s;
   }
 
   .add:hover {
+    cursor: pointer;
     text-shadow: rgb(168, 160, 143) 1px 0 10px;
     color: rgb(200, 67, 78);
     text-decoration:underline;

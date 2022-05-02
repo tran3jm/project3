@@ -116,7 +116,7 @@
 
     <!-- check out button-->
     <div class = "submitOrder">
-        <button id="submitcheckout"  class = "submit">SUBMIT ORDER</button>
+        <button id="submitcheckout" class = "submit">SUBMIT ORDER</button>
         <script>
         $(document).ready(function() {
             $('#submitcheckout').click(function(){

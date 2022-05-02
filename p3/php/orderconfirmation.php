@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/contact.css">
     <link rel="stylesheet" href="../css/greeting.css">
+    <link rel="stylesheet" href="../css/creditInfo.css"> 
     <link rel="modernlily" href="images/minimal.jpg">
     <link rel="icon" href="images/minimal.jpg">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -36,46 +37,74 @@
     </div>
 
     <div class = "contact-form">
-        <h1 class = "cover" style="text-align: left;">Order Conformation</h1>
+        <h1 class = "cover" style="padding-left:10px; text-align: left;">Customer Information</h1>
     </div>
-
-    <div class = "contact-form">
-        <!-- Orders -->
-        <form>
-            <fieldset class = "contact-fieldset">
+    <!-- customer Personal information -->
+    <div class="grid-container">
+    <form class="information-form">
+            <fieldset class = "form-fieldset">
                 <legend>First Name: *</legend>
-                <input type="text" id="fname" name="fname"><br><br>
+                <input type="text" id="fname" name="fname"placeholder="John"><br><br>
             </fieldset>
-            <fieldset class = "contact-fieldset">
+    </form>
+
+    <form class="information-form">
+            <fieldset class = "form-fieldset">
                 <legend>Last Name: *</legend>
-                <input type="text" id="lname" name="lname"><br><br>
+                <input type="text" id="lname" name="lname" placeholder="Doe"><br><br>
             </fieldset>
-            <fieldset class = "contact-fieldset">
+    </form>
+    <form class="information-form">
+            <fieldset class = "form-fieldset">
                 <legend>Email: *</legend>
-                <input type="email" id="email" name="email"><br><br>
+                <input type="email" id="email" name="email" placeholder="john.doe@gmail.com"><br><br>
             </fieldset>
-            <fieldset class = "contact-fieldset">
-                <legend>Phone Number*</legend>
-                <input type="number" id="pnum" name="pnum"><br><br>
+</form>
+    <form class="information-form">
+            <fieldset class = "form-fieldset">
+                <legend>Phone Number: *</legend>
+                <input type="number" id="pnum" name="pnum" placeholder="(123)-456-7890" pattern="([0-9]{3})-[0-9]{3}-[0-9]{4}"><br><br>
             </fieldset>
-            <fieldset class = "contact-fieldset">
+</form> 
+</div>
+
+<h1 style="text-align: left; padding: 0px 10px; margin: 0px 12px; background-color:white;">Credit Card Information</h1>
+<!-- Forms for cutomers credit/debit card information-->
+<div class="grid-container">
+<form class="information-form">
+            <fieldset class = "form-fieldset">
+                <legend>First Name: *</legend>
+                <input type="text" id="ccfname" name="ccfname" placeholder="John"><br><br>
+            </fieldset>
+</form>
+<form class="information-form">
+            <fieldset class = "form-fieldset">
+                <legend>Last Name: *</legend>
+                <input type="text" id="cclname" name="cclname" placeholder="Doe"><br><br>
+            </fieldset>
+</form>
+<form class="long-form information-form">
+            <fieldset class = "form-fieldset">
                 <legend>Credit Card Number: *</legend>
-                <input type="number" id="ccnumber" name="ccnumber"><br><br>
+                <input type="text" id="ccnumber" name="ccnumber" placeholder="1111 2222 3333 4444 5555" pattern="[0-9]{4} [0-9]{3} [0-9]{4} [0-9]{3} [0-9]{4}"><br><br>
             </fieldset>
-            <fieldset class = "contact-fieldset">
-                <legend>Security Number*</legend>
-                <input type="number" id="securityNumber" name="fname"><br><br>
+</form>
+<form class="information-form">
+            <fieldset class = "form-fieldset">
+                <legend>Security Number: *</legend>
+                <input type="text" id="securityNumber" name="fname" placeholer="123" pattern="[0-9]{3}"><br><br>
             </fieldset>
-            <fieldset class = "contact-fieldset">
-                <legend>Expiration Date *</legend>
+</form>
+<form class="information-form">
+            <fieldset class = "form-fieldset">
+                <legend>Expiration Date: *</legend>
                 <input type="month" id="expDate" name="expDate"><br><br>
             </fieldset>
-            
-            <fieldset class = "contact-fieldset">
-                <legend>Message: *</legend>
-                <input type="email" id="message" name="message" class = "message"><br><br>
-            </fieldset>
-        </form>
+</form>
+
+</div>
+
+    <!-- check out button-->
 
         <button id="submitcheckout"  class = "submit">SUBMIT ORDER</button>
         <script>
@@ -101,7 +130,7 @@
         });
         </script>
 
-    </div>
+    
     <script src = "../js/header.js"> </script>
     <script src = "../js/cart.js"> </script>
 </body>

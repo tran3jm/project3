@@ -86,8 +86,14 @@
             <a href="menu.php">MENU</a>
             <a href="../contact.html">CONTACT US</a>
             <a href="../location.html">LOCATION</a>
-            <a href="../signin.html" class = "login-sidemenu">LOG IN</a>
-            <a href="../signin.html">REGISTER</a>
+            <?php 
+                if (isset($_SESSION['loggedin'])) {
+                   printf("<a href=\"profile.php\">PROFILE</a>");
+                } else {
+                    printf("<a href=\"../signin.html\" class = \"login-sidemenu\">LOG IN</a>");
+                    printf("<a href=\"../signin.html\">REGISTER</a>");
+                }
+            ?>
         </div>
         <span style="font-size:40px;color:black;cursor:pointer" onclick="openNav()" class = "sidebar-icon">&#9776;</span>
         <img src = "../images/shopping-cart.png" class = "cart" id = "cartIcon" onclick="open()">

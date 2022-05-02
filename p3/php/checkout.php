@@ -15,8 +15,15 @@ if ( mysqli_connect_errno() ) {
 
 $array = json_decode($_POST["cart"], true);
 print_r($array);
-$userid = $_SESSION['id']; // seth question :,)
+
+if (isset($_SESSION['id'])) {
+    $userid = $_SESSION['id'];
+} else {
+    exit('User is not signed in');
+}
+
 echo $_SESSION['id'];
+
 $insertOrderQuery = "INSERT INTO `Orders` (`userID`) VALUES ('$userid')";
 
 mysqli_query($con, $insertOrderQuery);
@@ -36,3 +43,5 @@ foreach ($array as $value) {
 
 
 ?>
+
+<script src = "../js/cart.js"> </script>

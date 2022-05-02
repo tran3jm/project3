@@ -5,6 +5,8 @@ const container = document.querySelector(".container"),
       signUp = document.querySelector(".signup-link"),
       login = document.querySelector(".login-link");
 
+      document.getElementById("newaccntsubmit").onclick = function() {verifyPassword()};
+
     //   js code to show/hide password and change icon
     pwShowHide.forEach(eyeIcon =>{
         eyeIcon.addEventListener("click", ()=>{
@@ -34,12 +36,13 @@ const container = document.querySelector(".container"),
         container.classList.remove("active");
     });
 
+    
     function verifyPassword() {
         var password = document.getElementById('password').value;
         console.log(password);
         var regularExpression = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,30}$/;
         // /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,30}$/;
-        if(!regularExpression.test(password)) 
+        if(regularExpression.test(password)) 
         {
             alert("Invalid password, please try again...")
             alert("Password rules:\n"

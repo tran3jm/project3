@@ -80,7 +80,7 @@
             <div class="form signup">
                 <span class="title">Registration</span>
 
-                <form action="php/register.php" method="post">
+                <form action="register.php" method="post">
                     <div class="input-field">
                         <input type="text" name = "email" placeholder="Enter your Email" required>
                         <i class="uil uil-envelope"></i>
@@ -113,11 +113,11 @@
                             <label for="sigCheck" class="text">Remember me</label>
                         </div>
                         
-                        <a href="php/resetpassword.php" class="text">Forgot password?</a>
+                        <a href="resetpassword.php" class="text">Forgot password?</a>
                     </div>
 
                     <div class="input-field button">
-                        <input type="submit" value="Login Now" onclick="verifyPassword()">
+                        <input type="submit" id = "newaccntsubmit" value="Login Now" onclick="verifyPassword()">
                     </div>
                 </form>
 

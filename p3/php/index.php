@@ -82,7 +82,6 @@
   </div>
   
   <!-- Background Image and Javascript -->
-  <script src = "../js/general_js.js"></script>
   <script src = "../js/header.js"> </script>
   <script src = "../js/greeting.js"> </script>
 </div>

@@ -117,7 +117,7 @@
                     </div>
 
                     <div class="input-field button">
-                        <input type="submit" id = "newaccntsubmit" value="Login Now" onclick="verifyPassword()">
+                        <input type="submit" id = "newaccntsubmit" value="Login Now">
                     </div>
                 </form>
 

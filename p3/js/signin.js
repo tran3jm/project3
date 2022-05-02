@@ -37,18 +37,18 @@ const container = document.querySelector(".container"),
     });
 
     
-    function verifyPassword() {
-        var password = document.getElementById('password').value;
-        console.log(password);
-        var regularExpression = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,30}$/;
-        // /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,30}$/;
-        if(regularExpression.test(password)) 
-        {
-            alert("Invalid password, please try again...")
-            alert("Password rules:\n"
-                  + "   Must be between 6-30 characters\n"
-                  + "   There must be at least one number\n"
-                  + "   There needs to be at least one special charcter\n"
-                  + "   (e.g. '!@#$%^&*')")
-        }
-    }
+    // function verifyPassword() {
+    //     var password = document.getElementById('password').value;
+    //     console.log(password);
+    //     var regularExpression = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,30}$/;
+    //     // /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,30}$/;
+    //     if(!regularExpression.test(password)) 
+    //     {
+    //         alert("Invalid password, please try again...")
+    //         alert("Password rules:\n"
+    //               + "   Must be between 6-30 characters\n"
+    //               + "   There must be at least one number\n"
+    //               + "   There needs to be at least one special charcter\n"
+    //               + "   (e.g. '!@#$%^&*')")
+    //     }
+    // }

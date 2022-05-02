@@ -44,26 +44,26 @@
     <form class="information-form">
             <fieldset class = "form-fieldset">
                 <legend>First Name: *</legend>
-                <input type="text" id="fname" name="fname"><br><br>
+                <input type="text" id="fname" name="fname"placeholder="John"><br><br>
             </fieldset>
     </form>
 
     <form class="information-form">
             <fieldset class = "form-fieldset">
                 <legend>Last Name: *</legend>
-                <input type="text" id="lname" name="lname"><br><br>
+                <input type="text" id="lname" name="lname" placeholder="Doe"><br><br>
             </fieldset>
     </form>
     <form class="information-form">
             <fieldset class = "form-fieldset">
                 <legend>Email: *</legend>
-                <input type="email" id="email" name="email"><br><br>
+                <input type="email" id="email" name="email" placeholder="john.doe@gmail.com"><br><br>
             </fieldset>
 </form>
     <form class="information-form">
             <fieldset class = "form-fieldset">
                 <legend>Phone Number: *</legend>
-                <input type="number" id="pnum" name="pnum"><br><br>
+                <input type="number" id="pnum" name="pnum" placeholder="(123)-456-7890" pattern="([0-9]{3})-[0-9]{3}-[0-9]{4}"><br><br>
             </fieldset>
 </form> 
 </div>
@@ -74,25 +74,25 @@
 <form class="information-form">
             <fieldset class = "form-fieldset">
                 <legend>First Name: *</legend>
-                <input type="text" id="ccfname" name="ccfname"><br><br>
+                <input type="text" id="ccfname" name="ccfname" placeholder="John"><br><br>
             </fieldset>
 </form>
 <form class="information-form">
             <fieldset class = "form-fieldset">
                 <legend>Last Name: *</legend>
-                <input type="text" id="cclname" name="cclname"><br><br>
+                <input type="text" id="cclname" name="cclname" placeholder="Doe"><br><br>
             </fieldset>
 </form>
 <form class="long-form information-form">
             <fieldset class = "form-fieldset">
                 <legend>Credit Card Number: *</legend>
-                <input type="text" id="ccnumber" name="ccnumber"><br><br>
+                <input type="text" id="ccnumber" name="ccnumber" placeholder="1111 2222 3333 4444 5555" pattern="[0-9]{4} [0-9]{3} [0-9]{4} [0-9]{3} [0-9]{4}"><br><br>
             </fieldset>
 </form>
 <form class="information-form">
             <fieldset class = "form-fieldset">
                 <legend>Security Number: *</legend>
-                <input type="text" id="securityNumber" name="fname"><br><br>
+                <input type="text" id="securityNumber" name="fname" placeholer="123" pattern="[0-9]{3}"><br><br>
             </fieldset>
 </form>
 <form class="information-form">

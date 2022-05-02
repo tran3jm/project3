@@ -3,7 +3,7 @@
 session_start();
 // If the user is not logged in redirect to the login page...
 if (!isset($_SESSION['loggedin'])) {
-	header('Location: index.html');
+	header('Location: index.php');
 	exit;
 }
 $DATABASE_HOST = 'localhost';
@@ -40,15 +40,21 @@ $stmt->close();
 <body class = "section">
     <!-- Header with logo and dropdown icon w/ table -->
     <header>
-        <div id="mySidenav" class="sidenav">
+    <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="../index.html">HOME</a>
-            <a href="../about.html">OUR STORY</a>
+            <a href="index.php">HOME</a>
+            <a href="about.php">OUR STORY</a>
             <a href="menu.php">MENU</a>
-            <a href="../contact.html">CONTACT US</a>
-            <a href="../location.html">LOCATION</a>
-            <a href="../signin.html" class = "login-sidemenu">LOG IN</a>
-            <a href="../signin.html">REGISTER</a>
+            <a href="contact.php">CONTACT US</a>
+            <a href="location.php">LOCATION</a>
+            <?php 
+                if (isset($_SESSION['loggedin'])) {
+                   printf("<a href=\"profile.php\">PROFILE</a>");
+                } else {
+                    printf("<a href=\"signin.php\" class = \"login-sidemenu\">LOG IN</a>");
+                    printf("<a href=\"signin.php\">REGISTER</a>");
+                }
+            ?>
         </div>
         <span style="font-size:40px;color:black;cursor:pointer" onclick="openNav()" class = "sidebar-icon">&#9776;</span>
     </header>
@@ -77,6 +83,6 @@ $stmt->close();
             </div>
         </div>
     </div>
-    <script src = ../js/header.js> </script>
+    <script src = "../js/header.js"> </script>
 </body>
 </html>

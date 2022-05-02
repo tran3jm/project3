@@ -19,6 +19,26 @@ session_start();
 
 </head>
 <body>
+    <header class = "borderlessHeader">
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.php">HOME</a>
+            <a href="about.php">OUR STORY</a>
+            <a href="menu.php">MENU</a>
+            <a href="contact.php">CONTACT US</a>
+            <a href="location.php">LOCATION</a>
+            <?php 
+                if (isset($_SESSION['loggedin'])) {
+                    printf("<a href=\"profile.php\">PROFILE</a>");
+                } else {
+                    printf("<a href=\"signin.php\" class = \"login-sidemenu\">LOG IN</a>");
+                    printf("<a href=\"signin.php\">REGISTER</a>");
+                }
+            ?>
+    </div>
+    <span style="font-size:40px;color:white;cursor:pointer" onclick="openNav()" class = "sidebar-icon">&#9776;</span>
+    </header>
     <div class="container">
         <div class="forgetpwrd forms">
             <div class="form login">
@@ -51,7 +71,7 @@ session_start();
                 <div class="login-signup"></div>
                 <div>
                 <span class="transition-between">Go back to Login?
-                    <a href="../index.html" class="text signup-link">Back</a>
+                    <a href="../index.php" class="text signup-link">Back</a>
                 </span>
                  </div>
             </div>

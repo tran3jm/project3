@@ -16,10 +16,17 @@ button {
 
 #submitcheckout {
     width: 50%;
-    height: 10%;
     padding: 20px;
-    height: 20%;
+    top: 40px;
+    display: block;
     background-color: lightblue;
+    border-radius: 10px;
+}
+
+.submitOrder {
+    background-color: white;
+    margin: 0 12px 0 12px;
+    padding-bottom: 40px;
 }
 
 legend {
